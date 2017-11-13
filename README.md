@@ -3,7 +3,7 @@
 ## Files
 
 ## To-Do's
-*changes started being logged on 2017-11-13, there have been several changes before then*
+*several previous untracked items have been made*
 - [x] add [okraits/j4-make-config](https://github.com/okraits/j4-make-config) as submodule
 - [ ] create `prepare.sh` script to prepare or update local environment to use these configs
   - [ ] ensure that this includes updating submodules
@@ -17,4 +17,5 @@
 - [ ] get better nm-applet icons
 
 ## Change Log
+*changes started being logged on 2017-11-13, there have been several changes before then*
 - **2017-11-12:** Add submodule for `j4-make-config`
