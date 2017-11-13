@@ -12,6 +12,11 @@
 - [ ] add gaps increment & decrement keybinds
 - [ ] make focused window more visually obvious
 - [ ] make battery indicator only appear when there's actually a battery
+- [ ] Add compton configs
+  - [ ] Install Compton
+  - [ ] Transparency for windows (more for unfocused)
+  - [ ] Transparency for rofi
+  - [ ] Faded transitions of windows and rofi
 - [ ] create better `i3-bar` defaults as a fallback
 - [ ] make current parent container more visually obvious
 - [ ] get better nm-applet icons
