@@ -1,0 +1,3 @@
+[submodule "j4-make-config"]
+	path = j4-make-config
+	url = git@github.com:okraits/j4-make-config.git

@@ -4,6 +4,7 @@
 
 ## To-Do's
 *several previous untracked items have been made*
+>>>>>>> j4-make-config
 - [x] add [okraits/j4-make-config](https://github.com/okraits/j4-make-config) as submodule
 - [ ] create `prepare.sh` script to prepare or update local environment to use these configs
   - [ ] ensure that this includes updating submodules
