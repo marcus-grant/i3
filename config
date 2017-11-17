@@ -365,46 +365,50 @@ exec --no-startup-id start_conky_maia
 exec --no-startup-id xautolock -time 40 -locker blurlock
 exec_always --no-startup-id setcursor
 
+# ------------------------- Bar Configs ------------------------
+# Polybar, only use i3status OR (exclusively) polybar so comment one out
+exec_always --no-startup-id $HOME/.dotfiles/polybar/launch.sh
+
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	status_command i3status
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-	font xft:Noto Sans,Icons 10.5
-	strip_workspace_numbers yes
-
-	colors {
-#	background $transparent
-		#background #2B2C2B
-                #statusline #F9FAF9
-		#separator  #454947
-
-#                                  border  backgr. text
-		#focused_workspace  #F9FAF9 #16A085 #2B2C2B
-		#active_workspace   #595B5B #353836 #FDF6E3
-		#inactive_workspace #595B5B #353836 #EEE8D5
-		#urgent_workspace   #16A085 #FDF6E3 #E5201D
-		
-		
-        	# Railscasts
-        	separator $base03
-        	background $base01
-        	statusline $base05
-        	focused_workspace $base0C $base0D $base00
-        	active_workspace $base02 $base02 $base07
-        	inactive_workspace $base01 $base01 $base03
-        	urgent_workspace $base08 $base08 $base07
-    
-	}
-}
-
-# hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+# bar {
+#     status_command i3status
+#
+# ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+# #	tray_output primary
+# #	tray_output eDP1
+#
+#     bindsym button4 nop
+#     bindsym button5 nop
+#     font xft:Noto Sans,Icons 10.5
+#     strip_workspace_numbers yes
+#
+#     colors {
+# #	background $transparent
+#         #background #2B2C2B
+#                 #statusline #F9FAF9
+#         #separator  #454947
+#
+# #                                  border  backgr. text
+#         #focused_workspace  #F9FAF9 #16A085 #2B2C2B
+#         #active_workspace   #595B5B #353836 #FDF6E3
+#         #inactive_workspace #595B5B #353836 #EEE8D5
+#         #urgent_workspace   #16A085 #FDF6E3 #E5201D
+#
+#
+#             # Railscasts
+#             separator $base03
+#             background $base01
+#             statusline $base05
+#             focused_workspace $base0C $base0D $base00
+#             active_workspace $base02 $base02 $base07
+#             inactive_workspace $base01 $base01 $base03
+#             urgent_workspace $base08 $base08 $base07
+#
+#     }
+# }
+#
+# # hide/unhide i3status bar
+# bindsym $mod+m bar mode toggle
 
 
 
@@ -413,8 +417,8 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-#gaps inner 16
-#gaps outer -4
+# gaps inner 8
+# gaps outer 2
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>
@@ -427,6 +431,10 @@ bindsym $mod+m bar mode toggle
 # Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 #smart_borders on
+
+gaps inner 8
+gaps outer 4
+smart_gaps on
 
 # Press $mod+Shift+g to enter the gap mode. Choose o or i for modifying outer/inner gaps. Press one of + / - (in-/decrement for current workspace) or 0 (remove gaps for current workspace). If you also press Shift with these keys, the change will be global for all workspaces.
 set $mode_gaps Gaps: (o) outer, (i) inner
