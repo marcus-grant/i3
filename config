@@ -95,8 +95,10 @@ font xft:Noto Mono 10
 floating_modifier $mod
 
 # Background using feh
-#exec
-
+# exec --no-startup-id feh --bg-scale /home/marcus/.config/i3/wallpapers/numa_flat_rags_wallpaper_cyan_dark_by_microfreaks-1920x1080.png
+# as a patch for now, run the background.sh script inside i3 dotfiles
+# eval $(cat ~/.config/i3/wallpaper-link.png)
+exec ~/.config/i3/set-background.sh
 
 # start a terminal
 #bindsym $mod+return exec terminal
