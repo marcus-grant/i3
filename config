@@ -369,7 +369,24 @@ exec_always --no-startup-id setcursor
 
 # ------------------------- Bar Configs ------------------------
 # Polybar, only use i3status OR (exclusively) polybar so comment one out
-exec_always --no-startup-id $HOME/.dotfiles/polybar/launch.sh
+# exec_always --no-startup-id $HOME/.dotfiles/polybar/launch.sh
+
+# i3blocks config
+# exec_always --no-startup-id i3blocks -c $HOME/.dotfiles/i3/i3blocks/config
+bar {
+  font pango: PowerlineFont 9
+  status_command i3blocks -c ~/.dotfiles/i3/i3blocks/config
+  colors {
+    background #2F2F2F
+        focused_workspace  #BABABA #475577 #BABABA
+        active_workspace   #595B5B #353836 #BABABA
+        inactive_workspace #595B5B #353836 #BABABA
+        urgent_workspace   #16A085 #B8312F #BABABA
+  }
+  # colors {
+  #   background #2F2F2F
+  # }
+}
 
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
 # bar {
